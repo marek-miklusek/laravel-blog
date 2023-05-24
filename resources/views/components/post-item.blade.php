@@ -2,7 +2,7 @@
 
     {{-- Article image --}}
     <a href="{{ route('show', $post) }}" class="hover:opacity-75">
-        <img src="{{ $post->thumbnail() }}">
+        <img src="{{ $post->thumbnail() }}" class="aspect-[4/3] object-contain">
     </a>
 
     {{-- Article content --}}
@@ -20,7 +20,7 @@
         <p href="#" class="text-sm pb-3">
             By 
             <a href="#" class="font-semibold hover:text-gray-800">
-                {{ $post->user->name }}
+                {{-- {{ $post->user->name }} --}}
             </a>, Published on {{ $post->formatDate() }}
         </p>
         <a href="{{ route('show', $post) }}" class="pb-6">

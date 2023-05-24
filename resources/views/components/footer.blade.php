@@ -1,4 +1,4 @@
-<footer class="w-full border-t bg-white pb-12">
+<footer class="w-full border-t bg-white pb-6">
     {{-- <div class="relative w-full flex items-center invisible md:visible md:pb-12"
         x-data="getCarouselData()">
         <button class="absolute bg-blue-800 hover:bg-blue-700 text-white text-2xl font-bold
