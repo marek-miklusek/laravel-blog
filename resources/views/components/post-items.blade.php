@@ -1,4 +1,4 @@
-<article class="bg-white flex flex-col shadow my-4">
+<article class="w-full bg-white flex flex-col shadow my-4">
 
     {{-- Article image --}}
     <a href="{{ route('show', $post) }}" class="hover:opacity-75">
@@ -20,7 +20,7 @@
         <p href="#" class="text-sm pb-3">
             By 
             <a href="#" class="font-semibold hover:text-gray-800">
-                {{-- {{ $post->user->name }} --}}
+                {{ $post->user->name }}
             </a>, Published on {{ $post->formatDate() }}
         </p>
         <a href="{{ route('show', $post) }}" class="pb-6">

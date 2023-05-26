@@ -71,6 +71,7 @@ class PostResource extends Resource
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime(),
             ])
+            ->defaultSort('published_at', 'desc') 
             ->filters([
                 //
             ])

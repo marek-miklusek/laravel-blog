@@ -165,13 +165,14 @@ class PostController extends Controller
             ->limit(1)
             ->first();
 
-        // $user = $request->user();
-        // PostView::create([
-        //     'ip_address' => $request->ip(),
-        //     'user_agent' => $request->userAgent(),
-        //     'post_id' => $post->id,
-        //     'user_id' => $user?->id
-        // ]);
+        $user = $request->user();
+
+        PostView::create([
+            'ip_address' => $request->ip(),
+            'user_agent' => $request->userAgent(),
+            'post_id' => $post->id,
+            'user_id' => $user?->id
+        ]);
 
         return view('post.show', compact('post', 'next', 'prev'));
     }

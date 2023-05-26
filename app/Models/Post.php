@@ -54,6 +54,10 @@ class Post extends Model
 
     public function thumbnail()
     {
+        if ( ! $this->thumbnail ) {
+            return false;
+        }
+
         if (str_starts_with($this->thumbnail, 'http')) {
             return $this->thumbnail;
         }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Tsukimi+Rounded:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,6 +8,10 @@ body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 } 
 
+.tsukimi {
+    font-family: 'Tsukimi Rounded', sans-serif;
+}
+
 pre {
     padding: 1rem;
     background-color: #1a202c;
@@ -13,6 +19,7 @@ pre {
     border-radius: 0.5rem;
     margin-bottom: 1rem;
 }
+
 
 
 

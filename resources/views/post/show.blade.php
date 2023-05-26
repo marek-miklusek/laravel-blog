@@ -29,7 +29,7 @@
                         {!! $post->body !!}
                     </div>
 
-                    {{-- <livewire:upvote-downvote :post="$post"/> --}}
+                    <livewire:upvote-downvote :post="$post" />
                 </div>
             </article>
 
@@ -65,7 +65,7 @@
 
             {{-- <livewire:comments :post="$post"/> --}}
         </section>
-        <x-sidebar></x-sidebar>
+        <x-sidebar />
     </div>
 
 </x-master-layout>

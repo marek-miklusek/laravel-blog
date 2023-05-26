@@ -3,8 +3,7 @@
     <section class="w-full md:w-2/3 flex flex-col items-center px-3">
 
         @foreach($posts as $post)
-        @dd($post->user->name)
-            <x-post-item :post="$post" />
+            <x-post-items :post="$post" />
         @endforeach
 
         {{-- Pagination --}}
