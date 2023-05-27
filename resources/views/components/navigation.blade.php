@@ -12,18 +12,18 @@
             justify-center text-xs sm:text-sm font-bold uppercase mt-0 px-6 py-2">
             <div>
                 <a href="{{route('home')}}" class="hover:bg-blue-600 hover:text-white rounded py-1 px-1 mx-2
-                    sm:py-2 sm:px-4 {{ request()->getRequestUri() == '/' ? 'bg-white' :  '' }}">
+                    sm:py-2 sm:px-4 {{ request()->getRequestUri() == '/' ? 'bg-blue-600 text-white' :  '' }}">
                     Home
                 </a>
                 @foreach($categories as $category)
                     <a href="{{ route('by-category', $category) }}"
                         class="hover:bg-blue-600 hover:text-white rounded py-1 px-1 mx-2 sm:py-2 sm:px-4
-                        {{ request('category')?->slug === $category->slug ? 'bg-white' :  '' }}">
+                        {{ request('category')?->slug === $category->slug ? 'bg-blue-600 text-white' :  '' }}">
                         {{ $category->title }}
                     </a>
                 @endforeach
                 <a href="{{ route('about-us') }}" class="hover:bg-blue-600 hover:text-white rounded py-1 px-1 sm:py-2 
-                    sm:px-4 mx-2 whitespace-nowrap {{ request()->getRequestUri() == '/about-us' ? 'bg-white' :  '' }}">
+                    sm:px-4 mx-2 whitespace-nowrap {{ request()->getRequestUri() == '/about-us' ? 'bg-blue-600 text-white' :  '' }}">
                     About us
                 </a>
             </div>

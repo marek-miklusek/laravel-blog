@@ -29,7 +29,7 @@ class Category extends Model
     public function publishedPosts(): BelongsToMany
     {
         return $this->belongsToMany(Post::class)
-            ->where('active', '=', 1)
+            ->where('active', true)
             ->whereDate('published_at', '<', Carbon::now());
     }
 }

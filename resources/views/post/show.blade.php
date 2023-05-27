@@ -28,7 +28,7 @@
                     <div>
                         {!! $post->body !!}
                     </div>
-
+                    
                     <livewire:upvote-downvote :post="$post" />
                 </div>
             </article>

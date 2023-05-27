@@ -54,9 +54,7 @@ class Post extends Model
 
     public function thumbnail()
     {
-        if ( ! $this->thumbnail ) {
-            return false;
-        }
+        if (is_null($this->thumbnail)) return false;
 
         if (str_starts_with($this->thumbnail, 'http')) {
             return $this->thumbnail;
@@ -71,7 +69,7 @@ class Post extends Model
         return new Attribute(
             get: function ($value, $attributes) {
                 $words = Str::wordCount(strip_tags($attributes['body']));
-                $minutes = ceil($words / 200);
+                $minutes = ceil($words / 150);
 
                 return $minutes . ' ' . str('min')->plural($minutes) . ', '
                     . $words . ' ' . str('word')->plural($words);

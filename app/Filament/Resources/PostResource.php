@@ -70,8 +70,7 @@ class PostResource extends Resource
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime(),
-            ])
-            ->defaultSort('published_at', 'desc') 
+            ])->defaultSort('published_at', 'desc')
             ->filters([
                 //
             ])

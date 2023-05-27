@@ -1,5 +1,5 @@
 <article class="w-full bg-white flex flex-col shadow my-4">
-
+    
     {{-- Article image --}}
     <a href="{{ route('show', $post) }}" class="hover:opacity-75">
         <img src="{{ $post->thumbnail() }}" class="aspect-[4/3] object-contain">
@@ -21,7 +21,7 @@
             By 
             <a href="#" class="font-semibold hover:text-gray-800">
                 {{ $post->user->name }}
-            </a>, Published on {{ $post->formatDate() }}
+            </a>, Published on {{ $post->formatDate() }} | {{ $post->human_read_time }}
         </p>
         <a href="{{ route('show', $post) }}" class="pb-6">
             {!! $post->teaser() !!}
