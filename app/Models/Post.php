@@ -71,7 +71,7 @@ class Post extends Model
                 $words = Str::wordCount(strip_tags($attributes['body']));
                 $minutes = ceil($words / 150);
 
-                return $minutes . ' ' . str('min')->plural($minutes) . ', '
+                return $minutes . ' ' . str('min')->plural($minutes) . ' read'.', '
                     . $words . ' ' . str('word')->plural($words);
             }
         );

@@ -33,7 +33,7 @@ class PostController extends Controller
                 $query->whereNull('upvote_downvotes.is_upvote')
                     ->orWhere('upvote_downvotes.is_upvote', '=', 1);
             })
-            ->where('active', '=', 1)
+            ->where('active', true)
             ->whereDate('published_at', '<', Carbon::now())
             ->orderByDesc('upvote_count')
             ->groupBy([
@@ -55,6 +55,7 @@ class PostController extends Controller
         $user = auth()->user();
 
         if ($user) {
+            // Create a new table($left_join), which posts user upvoted(post_id) and in specific category(category_id) 
             $left_join = "(SELECT cp.category_id, cp.post_id FROM upvote_downvotes
                         JOIN category_post cp ON upvote_downvotes.post_id = cp.post_id
                         WHERE upvote_downvotes.is_upvote = 1 and upvote_downvotes.user_id = ?) as t";
@@ -75,7 +76,7 @@ class PostController extends Controller
             $recommended_posts = Post::query()
                 ->leftJoin('post_views', 'posts.id', '=', 'post_views.post_id')
                 ->select('posts.*', DB::raw('COUNT(post_views.id) as view_count'))
-                ->where('active', '=', 1)
+                ->where('active', true)
                 ->whereDate('published_at', '<', Carbon::now())
                 ->orderByDesc('view_count')
                 ->groupBy([
@@ -101,7 +102,7 @@ class PostController extends Controller
         //            }])
             ->whereHas('posts', function ($query) {
                 $query
-                    ->where('active', '=', 1)
+                    ->where('active', true)
                     ->whereDate('published_at', '<', Carbon::now());
             })
             ->select('categories.*')
@@ -182,15 +183,15 @@ class PostController extends Controller
 
     public function search(Request $request)
     {
-        $q = $request->get('q');
+        $expression = $request->expression;
 
         $posts = Post::query()
             ->where('active', true)
             ->whereDate('published_at', '<=', Carbon::now())
             ->orderBy('published_at', 'desc')
-            ->where(function ($query) use ($q) {
-                $query->where('title', 'like', "%$q%")
-                    ->orWhere('body', 'like', "%$q%");
+            ->where(function ($query) use ($expression) {
+                $query->where('title', 'like', "%$expression%")
+                    ->orWhere('body', 'like', "%$expression%");
             })
             ->paginate(10);
 

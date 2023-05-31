@@ -12,8 +12,10 @@ class PostObserver
      */
     public function saved(Post $post): void
     {
-        if ($post->isDirty('thumbnail') && is_null($post->thumbnail)) {
-            Storage::disk('public')->delete($post->getOriginal('thumbnail'));
+        $location = $post->getOriginal('thumbnail') ?? false;
+
+        if ($post->isDirty('thumbnail')) {
+            Storage::disk('public')->delete($location);
         }
     }
 

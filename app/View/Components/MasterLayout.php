@@ -23,7 +23,7 @@ class MasterLayout extends Component
             ->select('categories.title', 'categories.slug', DB::raw('count(*) as total'))
             ->groupBy(['categories.title', 'categories.slug'])
             ->orderByDesc('total')
-            ->limit(3)
+            ->limit(4)
             ->get();
     }
 

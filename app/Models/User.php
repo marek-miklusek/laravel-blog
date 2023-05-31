@@ -25,7 +25,8 @@ class User extends Authenticatable implements MustVerifyEmail, FilamentUser
         'name',
         'email',
         'password',
-        'email_verified_at'
+        'email_verified_at',
+        'thumbnail'
     ];
 
 
@@ -57,5 +58,20 @@ class User extends Authenticatable implements MustVerifyEmail, FilamentUser
     public function canAccessFilament(): bool 
     {
         return $this->hasRole('admin');
+    }
+
+
+    /**
+     * Image for user
+     */
+    public function thumbnail()
+    {
+        if (is_null($this->thumbnail)) return false;
+
+        if (str_starts_with($this->thumbnail, 'http')) {
+            return $this->thumbnail;
+        }
+
+        return '/storage/' . $this->thumbnail;
     }
 }

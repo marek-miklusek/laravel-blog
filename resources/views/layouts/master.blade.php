@@ -10,21 +10,17 @@
     @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-gray-50">
+<body class="bg-gradient-to-r from-slate-500 to-yellow-100">
     
     <x-navigation-icons />
-
-            {{-- @if (isset($header))
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
-        @endif --}}
     
     <x-header />
 
     <x-navigation :categories="$categories" />
+
+    @if(session('message'))
+        <x-flash-message-success :message="session('message')" />
+    @endif
 
     <main class="container mx-auto flex flex-wrap py-6">
         {{ $slot }}
@@ -35,3 +31,7 @@
     @livewireScripts
 </body>
 </html>
+
+
+
+

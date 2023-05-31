@@ -43,6 +43,7 @@ class UserResource extends Resource
                     ->hiddenOn('edit')
                     ->required()
                     ->visibleOn('create'),
+                Forms\Components\FileUpload::make('thumbnail'),
             ]);
     }
 
