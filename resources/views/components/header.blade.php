@@ -1,6 +1,6 @@
 <header class="w-full container mx-auto">
     <div class="flex flex-col items-center py-12">
-        <a href="/" class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl tsukimi">
+        <a href="/" class="font-bold text-gray-800 uppercase text-center hover:text-gray-700 text-5xl tsukimi">
             Code Chronicles
         </a>
         <p class="text-center max-w-2xl text-lg text-gray-600 mt-3">
