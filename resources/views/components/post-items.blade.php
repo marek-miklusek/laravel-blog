@@ -2,7 +2,7 @@
 
     {{-- Article image --}}
     <a href="{{ route('show', $post) }}" class="hover:opacity-75">
-        <img src="{{ $post->thumbnail() }}" class="aspect-[3/4] object-contain rounded-md">
+        <img src="{{ $post->thumbnail() }}" class="aspect-auto object-contain rounded-md">
     </a>
 
     {{-- Article content --}}

@@ -14,7 +14,7 @@
     </div>
 
     <div class="w-full shadow-2xl flex flex-col my-4 p-6">
-        <h3 class="text-xl font-semibold pb-5 text-indigo-600">
+        <h3 class="text-xl font-semibold pb-5">
             {{ \App\Models\TextWidget::getWidget('sidebar', 'title') }}
         </h3>
         <div class="text-gray-600">
