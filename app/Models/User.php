@@ -52,6 +52,12 @@ class User extends Authenticatable implements MustVerifyEmail, FilamentUser
     ];
 
 
+    /*
+    |--------------------------------------------------------------------------
+    | Public functions
+    |--------------------------------------------------------------------------
+    */
+
     /**
      * Only user with role name 'admin' can logg in admin dashboard
      */
@@ -62,7 +68,7 @@ class User extends Authenticatable implements MustVerifyEmail, FilamentUser
 
 
     /**
-     * Image for user
+     * Thumbnail for user
      */
     public function thumbnail()
     {

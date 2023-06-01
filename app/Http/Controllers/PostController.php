@@ -48,7 +48,7 @@ class PostController extends Controller
                 'posts.created_at',
                 'posts.updated_at',
             ])
-            ->limit(5)
+            ->limit(6)
             ->get();
 
         // If authorized - Show recommended posts based on user upvotes

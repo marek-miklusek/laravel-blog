@@ -24,9 +24,9 @@
         </a>
         @if ($showAuthor)
             <div class="flex items-center gap-2">
-                <p class="text-gray-600">By</p>
-                <a href="https://openai.com/" target="_blanket" class="hover:text-gray-900 text-gray-600 font-semibold text-sm">
-                    <img class="w-10 h-10 object-cover object-center rounded-full"
+                <p class="text-gray-700">By</p>
+                <a href="https://openai.com/" target="_blanket" class="hover:opacity-50">
+                    <img class="w-8 h-8 object-cover object-center rounded-full"
                         src="{{ $post->user->thumbnail() }}"
                         alt="OpenAI logo"/>
                 </a>

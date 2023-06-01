@@ -21,17 +21,17 @@
                 @foreach($popular_posts as $post)
                     <div class="grid grid-cols-4 gap-2 mb-4 border-b-[1px] border-black">
                         <a href="{{ route('show', $post) }}" class="pt-1">
-                            <img src="{{ $post->thumbnail() }}" alt="{{ $post->title }}"/>
+                            <img src="{{ $post->thumbnail() }}" alt="{{ $post->title }}" class="hover:opacity-50"/>
                         </a>
                         <div class="col-span-3">
                             <a href="{{ route('show', $post) }}">
-                                <h3 class="text-sm uppercase whitespace-nowrap truncate">
+                                <h3 class="text-sm uppercase whitespace-nowrap truncate hover:text-blue-600">
                                     {{ $post->title }}
                                 </h3>
                             </a>
                             <div class="flex gap-1 mb-2">
                                 @foreach($post->categories as $category)
-                                <a href="#" class="bg-blue-500 text-white p-1 rounded text-[8px] font-bold uppercase">
+                                <a href="#" class="bg-blue-500 text-white hover:text-opacity-50 p-1 rounded text-[8px] font-bold uppercase">
                                         {{ $category->title }}
                                     </a>
                                 @endforeach
@@ -39,7 +39,7 @@
                             <div class="text-xs">
                                 {{ $post->teaser(10) }}
                             </div>
-                            <a href="{{ route('show', $post) }}" class="text-xs uppercase text-gray-800 hover:text-black">
+                            <a href="{{ route('show', $post) }}" class="text-xs uppercase text-gray-800 hover:text-blue-600">
                                 Continue Reading <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
