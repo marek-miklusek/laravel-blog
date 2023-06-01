@@ -30,7 +30,7 @@ class EditPost extends EditRecord
     protected function getHeaderWidgets(): array
     {
         return [
-            // PostOverview::class
+            PostOverview::class
         ];
     }
 }
