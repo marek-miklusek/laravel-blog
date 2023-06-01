@@ -40,12 +40,14 @@
                 <div class="w-1/2">
                     @if($prev)
                         <a href="{{ route('show', $prev) }}"
-                           class="block w-full shadow-2xl hover:shadow-md text-left pl-4">
+                           class="block h-20 shadow-2xl w-full hover:shadow-md text-left pl-4">
                             <p class="text-lg text-blue-800 font-bold flex items-center">
                                 <i class="fas fa-arrow-left pr-1"></i>
                                 Previous
                             </p>
-                            <p class="pt-2 text-gray-700 ">{{ \Illuminate\Support\Str::words($prev->title, 5) }}</p>
+                            <p class="text-gray-700 ">
+                                {{ \Illuminate\Support\Str::words($prev->title, 5) }}
+                            </p>
                         </a>
                     @endif
                 </div>
@@ -53,11 +55,11 @@
                 <div class="w-1/2">
                     @if($next)
                         <a href="{{ route('show', $next) }}"
-                           class="block w-full shadow-2xl hover:shadow-md text-right pr-4">
+                           class="block w-full h-20 shadow-2xl hover:shadow-md text-right pr-4">
                             <p class="text-lg text-blue-800 font-bold flex items-center justify-end">
                                 Next <i class="fas fa-arrow-right pl-1"></i>
                             </p>
-                            <p class="pt-2 text-gray-700 ">
+                            <p class="text-gray-700 ">
                                 {{ \Illuminate\Support\Str::words($next->title, 5) }}
                             </p>
                         </a>
