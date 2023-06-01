@@ -34,6 +34,7 @@ class CommentCreate extends Component
         $user = auth()->user();
 
         if ( ! $user ) {
+            session()->flash('message', 'You have to log in first');
             return redirect('login');
         }
 

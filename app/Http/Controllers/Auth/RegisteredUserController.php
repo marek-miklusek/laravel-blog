@@ -46,6 +46,7 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect('dashboard');
+        session()->flash('message', 'Welcome '.auth()->user()->name.' you are logged in!');
+        return redirect('/');
     }
 }
