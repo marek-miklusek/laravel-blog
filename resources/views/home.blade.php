@@ -1,4 +1,5 @@
 <x-master-layout>
+    
     <div class="container max-w-5xl mx-auto py-6 px-3">
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
