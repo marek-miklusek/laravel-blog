@@ -16,7 +16,10 @@
                     </div>
                     <hr class="my-4">
                 @empty
-                    <h1 class="text-center text-yellow-300 text-xl">I'm sorry, there is no match for "{{ request()->get('expression') }}"</h1>
+                    <h1 class="text-center text-amber-600 text-xl">
+                        I'm sorry, there is no match for 
+                        "{{ request()->get('expression') }}"
+                    </h1>
                 @endforelse
             </div>
             {{ $posts->links() }}

@@ -2,8 +2,8 @@
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
 
         <div class="flex items-center justify-between font-semibold text-sm text-black no-underline">
-            <a class="hover:text-white hover:underline px-4" href="https://github.com/marek-miklusek">
-                @mikiJunior
+            <a class="hover:text-white hover:underline px-4" href="https://mikijunior.com" target="_blanket">
+                @mikijunior
             </a>
         </div>
        

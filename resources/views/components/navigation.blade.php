@@ -8,7 +8,7 @@
     </div>
 
     <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
-        <div class="w-full text-center container mx-auto flex flex-col flex-wrap sm:flex-row items-center 
+        <div class="w-full mx-auto text-center container flex flex-col flex-wrap sm:flex-row items-center 
             justify-center text-xs sm:text-sm font-bold uppercase mt-0 px-6 py-2">
             <div>
                 <a href="{{route('home')}}" class="hover:bg-blue-600 hover:text-white rounded py-1 px-1 mx-2
@@ -24,9 +24,9 @@
                 @endforeach
             </div>
 
-            <div class="flex items-center">
+            <div class="flex items-center justify-center flex-wrap">
                 <form action="{{ route('search') }}">
-                    <div class="relative ml-5 text-lg bg-transparent text-gray-800">
+                    <div class="relative text-lg bg-transparent text-gray-800">
                         <div class="flex items-center border-b-[1px] border-indigo-500 py-2">
                             <input name="expression" class="bg-transparent font-normal text-gray-800 border-none px-2 leading-tight focus:outline-none" 
                                 type="text" placeholder="Search article...">

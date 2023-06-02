@@ -50,11 +50,12 @@ class UpvoteDownvote extends Component
         $user = request()->user();
         
         if ( ! $user ) {
+            session()->flash('message', 'You have to log in first');
             return redirect()->route('login');
         }
-        if ( ! $user->hasVerifiedEmail() ) {
-            return redirect()->route('verification.notice');
-        }
+        // if ( ! $user->hasVerifiedEmail() ) {
+        //     return redirect()->route('verification.notice');
+        // }
 
         $model = \App\Models\UpvoteDownvote::where('post_id', '=', $this->post->id)->where('user_id', '=', $user->id)->first();
 
