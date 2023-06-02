@@ -24,10 +24,10 @@
                 @endforeach
             </div>
 
-            <div class="w-full mx-auto sm:w-auto sm:mx-0 flex items-center justify-center">
+            <div class="flex items-center justify-center">
                 <form action="{{ route('search') }}">
                     <div class="relative text-lg bg-transparent text-gray-800">
-                        <div class="flex items-center border-b-[1px] border-indigo-500 py-2">
+                        <div class="sm:ml-3 flex items-center border-b-[1px] border-indigo-500 py-2">
                             <input name="expression" class="bg-transparent font-normal text-gray-800 border-none px-2 leading-tight focus:outline-none" 
                                 type="text" placeholder="Search article...">
                             <button type="submit" class="absolute right-0 top-1.5 mt-3 mr-4">
