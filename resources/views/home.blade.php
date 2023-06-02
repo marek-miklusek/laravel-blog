@@ -9,7 +9,7 @@
                     Latest Post
                 </h2>
                 @if ($latest_post)
-                    <x-post-items :post="$latest_post" />
+                    <x-post-items :post="$latest_post" :latest="true" />
                 @endif
             </div>
 
