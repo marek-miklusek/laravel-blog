@@ -24,7 +24,7 @@
                 @endforeach
             </div>
 
-            <div class="w-full mx-auto sm:w-auto sm:mx-0 flex items-center justify-center">
+            <div class="flex items-center justify-center">
                 <form action="{{ route('search') }}">
                     <div class="relative text-lg bg-transparent text-gray-800">
                         <div class="flex items-center border-b-[1px] border-indigo-500 py-2">
