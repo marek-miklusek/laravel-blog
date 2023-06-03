@@ -5,7 +5,7 @@
         <section class="w-full md:w-2/3 px-3">
             <div class=" flex flex-col items-center">
                 @foreach($posts as $post)
-                    <x-post-items :post="$post" :show-category-title="false" />
+                    <x-post-items :post="$post" :show-category-title="false" :latest="true" />
                 @endforeach
             </div>
             {{ $posts->links() }}
