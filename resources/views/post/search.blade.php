@@ -16,7 +16,7 @@
                     </div>
                     <hr class="my-4">
                 @empty
-                    <h1 class="text-center text-amber-600 text-xl">
+                    <h1 class="text-center font-semibold text-orange-600 text-xl">
                         I'm sorry, there is no match for 
                         "{{ request()->get('expression') }}"
                     </h1>
