@@ -184,17 +184,18 @@ class PostController extends Controller
     public function search(Request $request)
     {
         $expression = $request->expression;
+        $expression = explode(' ', $expression);
 
         $posts = Post::query()
             ->where('active', true)
             ->whereDate('published_at', '<=', Carbon::now())
             ->orderBy('published_at', 'desc')
             ->where(function ($query) use ($expression) {
-                $query->where('title', 'like', "%$expression%")
-                    ->orWhere('body', 'like', "%$expression%");
+                $query->where('title', 'like', "%$expression[0]%")
+                    ->orWhere('body', 'like', "%$expression[0]%");
             })
             ->paginate(10);
 
-        return view('post.search', compact('posts'));
+        return view('post.search', compact('posts', 'expression'));
     }
 }
