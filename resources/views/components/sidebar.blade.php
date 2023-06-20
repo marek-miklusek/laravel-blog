@@ -18,12 +18,10 @@
             {{ \App\Models\TextWidget::getWidget('sidebar', 'title') }}
         </h3>
         <div class="text-gray-600">
-            {!! \App\Models\TextWidget::getWidget('sidebar', 'content') !!}
+            When you want to leave a comment or hit a like, you have to 
+            <a href="{{ route('login') }}" class="text-blue-700 hover:underline">sign in</a> first.
+            {{-- {!! \App\Models\TextWidget::getWidget('sidebar', 'content') !!} --}}
         </div>
-        {{-- <a href="{{ route('about-us') }}"
-           class="w-full bg-blue-600 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
-            Get to know us
-        </a> --}}
     </div>
 
 </aside>
