@@ -1,8 +1,9 @@
 <x-master-layout>
 
+    <!-- Session Status -->
+    <x-auth-session-status class="w-full mx-auto mb-4" :status="session('status')" />
+
     <div class="w-full flex justify-center">
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
 
         <form method="POST" action="{{ route('login') }}" class="bg-gray-100 shadow-2xl p-10 rounded-md">
             @csrf
