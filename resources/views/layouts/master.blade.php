@@ -14,16 +14,16 @@
     
     <x-navigation-icons />
     
+    <x-flash-message />
+
     <x-header />
 
     <x-navigation :categories="$categories" />
-
+    
     <main class="container mx-auto flex flex-wrap py-6">
         {{ $slot }}
     </main>
     
-    <x-flash-message />
-
     <x-footer />
 
     @livewireScripts
