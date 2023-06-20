@@ -18,13 +18,11 @@
 
     <x-navigation :categories="$categories" />
 
-    @if(session('message'))
-        <x-flash-message-success :message="session('message')" />
-    @endif
-
     <main class="container mx-auto flex flex-wrap py-6">
         {{ $slot }}
     </main>
+    
+    <x-flash-message />
 
     <x-footer />
 
