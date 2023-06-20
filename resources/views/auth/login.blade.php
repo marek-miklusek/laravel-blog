@@ -1,7 +1,7 @@
 <x-master-layout>
 
     <!-- Session Status -->
-    <div class="text-center">
+    <div class="w-full flex justify-center">
         <x-auth-session-status class="mb-4" :status="session('status')" />
     </div>
 
