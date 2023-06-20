@@ -19,8 +19,7 @@
         </h3>
         <div class="text-gray-600">
             When you want to leave a comment or hit a like, you have to 
-            <a href="{{ route('login') }}" class="text-blue-700 hover:underline">sign in</a> first.
-            {{-- {!! \App\Models\TextWidget::getWidget('sidebar', 'content') !!} --}}
+            <a href="{{ route('login') }}" class="text-blue-600 hover:underline">sign in</a> first.
         </div>
     </div>
 
