@@ -2,7 +2,7 @@
 
     {{-- Article image --}}
     <a href="{{ route('show', $post) }}" class="hover:opacity-75">
-        <img src="{{ $post->thumbnail() }}" class="{{ $latest ? '' : 'w-full h-44' }} object-contain rounded-md">
+        <img src="{{ $post->thumbnail() }}" class="{{ $latest ? '' : 'w-full h-44' }} object-cover rounded-md">
     </a>
 
     {{-- Article content --}}
